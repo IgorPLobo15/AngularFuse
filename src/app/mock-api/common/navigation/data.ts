@@ -15,7 +15,14 @@ export const defaultNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:document-text',
         link : '/formulario'
-    }
+    },
+    {
+        id   : 'produto1',
+        title: 'Produtos',
+        type : 'basic',
+        icon : 'heroicons_outline:document-text',
+        link : '/losprodutos1'
+    },
 ];
 export const compactNavigation: FuseNavigationItem[] = [
     {
