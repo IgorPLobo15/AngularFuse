@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FuseAlertComponent } from '@fuse/components/alert';
 
 @Component({
   selector: 'app-formulario',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './formulario.component.scss'
 })
 export class FormularioComponent {
+  showalert: boolean =false
 
+  alertar(){
+    this.showalert=true;
+  }
 }
