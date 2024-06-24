@@ -1,0 +1,82 @@
+<div class="flex min-w-0 flex-auto flex-col">
+    <!-- Main -->
+
+    <div class=" bg-gray-50 flex justify-between items-center p-4">
+        <div class=" text-right">
+            <p class="text-2xl font-bold mb-4">Riscos</p>
+        </div>
+        <div class="flex space-x-2">
+            <button type="submit" class=" bg-primary
+            text-on-primary  px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm  hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Salvar </button>
+          <button type="reset" class="bg-accent
+          text-on-accent px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm  hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Cancelar</button>
+
+        </div>
+      </div>
+    <div class="flex-auto p-6 sm:p-10">
+        <div class="h-400 max-h-400 min-h-400 rounded-2xl border-2 border-dashed border-gray-300">
+            <mat-tab-group [animationDuration]="'0ms'">
+            <!-- Identificação de Riscos -->
+                <mat-tab label="Identificação de Riscos">
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-bold mb-2" for="risk-classification">Classificação de risco*</label>
+                        <input type="text" class="flex-grow border border-gray-300 p-2 rounded"for="risk-classification">
+                    </div>
+            <!-- Objetivo(s) estratégico(s) -->
+            <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2" for="strategic-objective">
+                    Objetivo(s) estratégico(s)*
+                </label>
+                <div class="flex space-x-2">
+                    <input class="flex-grow border border-gray-300 p-2 rounded" id="strategic-objective" type="text">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded">Incluir</button>
+                </div>
+            </div>
+
+            <!-- Lista de objetivos estratégicos -->
+            <div class="mb-6">
+                <p class="text-gray-700 mb-1">Lorem ipsum dolor sit amet consectetur. Placerat eu nunc ut.</p>
+                <p class="text-gray-700 mb-1">Lorem ipsum dolor sit amet consectetur. Augue posuere.</p>
+            </div>
+
+            <!-- Objetivo(s) Operacional(s) -->
+            <div class="mb-6">
+                <label class="block text-gray-700 font-bold mb-2" for="operational-objective">
+                    Objetivo(s) Operacional(s)*
+                </label>
+                <div class="flex space-x-2">
+                    <input class="flex-grow border border-gray-300 p-2 rounded" id="operational-objective" type="text">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded">Incluir</button>
+                </div>
+            </div>
+
+            <!-- Lista de objetivos operacionais -->
+            <div>
+                <p class="text-gray-700 mb-1">Lorem ipsum dolor sit amet consectetur. Mauris auctor ipsum.</p>
+                <p class="text-gray-700 mb-1">Lorem ipsum dolor sit amet consectetur. Vel enim morbi.</p>
+            </div>
+
+
+                </mat-tab>
+
+                <mat-tab label="Causas(s)">
+
+
+                </mat-tab>
+                <mat-tab label="Controle(s) Preventivo(s)">
+
+                </mat-tab>
+                <mat-tab label="Evento de Risco">
+
+                </mat-tab>
+                <mat-tab label="Consequâncias">
+
+                </mat-tab>
+                <mat-tab label="Controle(s) Corretivo(s)">
+
+                </mat-tab>
+            </mat-tab-group>
+
+    </div>
+    </div>
+</div>

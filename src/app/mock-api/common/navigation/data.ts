@@ -20,9 +20,16 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id   : 'produto1',
         title: 'Quimicos',
         type : 'basic',
-        icon : 'heroicons_outline:document-text',
+        icon : 'heroicons_outline:beaker',
         link : '/losprodutos1'
     },
+    {
+        id   : 'Riscos',
+        title: 'Riscos',
+        type : 'basic',
+        icon : 'heroicons_outline:presentation-chart-line',
+        link : '/riscos'
+    }
 ];
 export const compactNavigation: FuseNavigationItem[] = [
     {
