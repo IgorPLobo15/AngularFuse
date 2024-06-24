@@ -18,7 +18,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
     },
     {
         id   : 'produto1',
-        title: 'Produtos',
+        title: 'Quimicos',
         type : 'basic',
         icon : 'heroicons_outline:document-text',
         link : '/losprodutos1'
