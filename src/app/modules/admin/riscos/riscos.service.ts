@@ -1,18 +1,26 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, throwError } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+
 
 
 export type objetivosEstrategi = {
     id: number;
     objetivoEstrategico: string;
+    objetivoOperacional: string; 
+    causas:string;
+    prevencao: string;
+    eventRisco: string;
+    consequencia: string;
+    correcao: string;
+    
   };
 @Injectable({
     providedIn: 'root'
 })
 export class RiscosService {
     apiUrl = 'http://localhost:3000/ObjetivosEstrategicos';
-  apiUrlCadastrar='http://localhost:3000/ObjetivosEstrategicos/cadastrar'
   constructor(private http: HttpClient) { }
 
   pegarObjetivos(): Observable<objetivosEstrategi[]> {
@@ -23,8 +31,10 @@ export class RiscosService {
       })
     );
   }
+  
+  
 
   criarObjetivos(objetivos : objetivosEstrategi){
-    return this.http.post(this.apiUrlCadastrar, objetivos);
+    return this.http.post(this.apiUrl, objetivos);
   }
 }
