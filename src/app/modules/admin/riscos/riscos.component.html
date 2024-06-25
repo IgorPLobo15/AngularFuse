@@ -1,7 +1,8 @@
 <div class="flex min-w-0 flex-auto flex-col">
     <!-- Main -->
 
-    <div class="bg-default  flex flex-col p-0 pb-1 dark:bg-transparent sm:flex-row sm:items-center sm:justify-between sm:px-4 sm:pb-4 sm:pt-4">
+    <div
+        class="bg-default  flex flex-col p-0 pb-1 dark:bg-transparent sm:flex-row sm:items-center sm:justify-between sm:px-4 sm:pb-4 sm:pt-4">
         <div class="min-w-0 flex-1">
             <div class="mt-2">
                 <h2 class="truncate text-3xl font-extrabold leading-7 tracking-tight sm:leading-10 md:text-4xl">
@@ -11,82 +12,83 @@
         </div>
         <!-- Actions -->
         <div class="mt-6 flex shrink-0 items-center sm:ml-4 sm:mt-0">
-            <button mat-stroked-button
-                class="rounded px-2 py-2 bg-accent-300
-                text-on-accent-300 "
-                type="button"
-            >
+            <button mat-stroked-button class="rounded px-2 py-2 bg-accent-300
+                text-on-accent-300 " type="button">
                 Cancelar
             </button>
             <div>
-                <button
-                    mat-flat-button
-                    class="ml-3 rounded px-2 py-2 bg-primary
-                    text-on-primary"
-                    type="button"
-                >
+                <button mat-flat-button class="ml-3 rounded px-2 py-2 bg-primary
+                    text-on-primary" type="button">
                     Salvar
                 </button>
             </div>
         </div>
     </div>
-    
+
     <div class="flex-auto p-6 sm:p-10">
         <div class="h-400 max-h-400 min-h-400 rounded-2xl border-2 border-dashed border-gray-300">
             <mat-tab-group [animationDuration]="'0ms'">
-            <!-- Identificação de Riscos -->
+                <!-- Identificação de Riscos -->
                 <mat-tab label="Identificação de Riscos">
                     <!-- Classificação de risco -->
-                   <form class="bg-card mt-8 flex flex-col overflow-hidden rounded-2xl p-8 pb-4 shadow">
-                    <div class="flex">
-                        <mat-form-field                            
-                            class="flex-auto"
-                        >
-                            <mat-label>Classificação de Risco*</mat-label>
-                            <input
-                                matInput
-                                
-                            />
-                            
-                        </mat-form-field>
-                    </div>                                          
-                    <!-- Objetivo(s) estratégico(s) -->
-                    <div class="flex">
-                        <mat-form-field                            
-                            class="flex-auto"
-                        >
-                            <mat-label>Objetivo(s) estratégico(s)</mat-label>
-                            <input
-                            matInput [(ngModel)]="novoObjetivo"  [ngModelOptions]="{standalone: true}"                           
-                            />
-                            <button (click)= "adicionarObjetivo()">
-                                
-                                <mat-icon svgIcon="heroicons_outline:plus"></mat-icon>
+                    <form class="bg-card mt-8 flex flex-col overflow-hidden rounded-2xl p-8 pb-4 shadow">
+                        <div class="flex">
+                            <mat-form-field class="flex-auto">
+                                <mat-label>Classificação de Risco*</mat-label>
+                                <input matInput />
 
-                            </button>
-                               
-                            
-                                 
-                                          
-                        </mat-form-field>
-                        
-                        <mat-list role="list">
-                            <mat-list-item *ngFor = "let Objetivo of objetivos; let i = index" role="listitem">{{Objetivo}}
-                                <button mat-button color="warn" (click)="deletarObjetivo(i)">Deletar</button>
-                            </mat-list-item>
-                            
-                          </mat-list>   
-                    </div> 
-            
+                            </mat-form-field>
+                        </div>
+                        <!-- Objetivo(s) estratégico(s) -->
+                        <div class="flex">
+                            <mat-form-field class="flex-auto">
+                                <mat-label>Objetivo(s) estratégico(s)</mat-label>
+                                <input matInput />
+                                <button>
 
-            <!-- Lista de objetivos estratégicos -->
-            
+                                    <mat-icon class="bg-primary
+                                text-on-primary" svgIcon="heroicons_outline:plus"></mat-icon>
 
-            <!-- Objetivo(s) Operacional(s) -->
-            
+                                </button>
 
-            <!-- Lista de objetivos operacionais -->
-                </form>        
+
+
+
+                            </mat-form-field>
+
+
+                        </div>
+
+
+
+                          <div class="p-4">
+                            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                              <div class="p-4 w-full border-gray-200 flex justify-between items-center "*ngFor="let objetivo of objetivosEstrategicos">
+                                <span >{{ objetivo.objetivoEstrategico }}</span>
+                                <button class="text-gray-500 hover:text-red-600">
+                                    <mat-icon class="" svgIcon="heroicons_outline:trash"></mat-icon>
+                                </button>
+
+                              </div>
+
+                            </div>
+                          </div>
+
+
+
+
+
+
+
+
+                        <!-- Lista de objetivos estratégicos -->
+
+
+                        <!-- Objetivo(s) Operacional(s) -->
+
+
+                        <!-- Lista de objetivos operacionais -->
+                    </form>
                 </mat-tab>
 
                 <mat-tab label="Causas(s)">
@@ -107,6 +109,6 @@
                 </mat-tab>
             </mat-tab-group>
 
-    </div>
+        </div>
     </div>
 </div>
