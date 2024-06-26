@@ -8,13 +8,13 @@ import { catchError } from 'rxjs/operators';
 export type objetivosEstrategi = {
     id: number;
     objetivoEstrategico: string;
-    objetivoOperacional: string; 
+    objetivoOperacional: string;
     causas:string;
     prevencao: string;
     eventRisco: string;
     consequencia: string;
     correcao: string;
-    
+
   };
 @Injectable({
     providedIn: 'root'
@@ -31,8 +31,8 @@ export class RiscosService {
       })
     );
   }
-  
-  
+
+
 
   criarObjetivos(objetivos : objetivosEstrategi){
     return this.http.post(this.apiUrl, objetivos);

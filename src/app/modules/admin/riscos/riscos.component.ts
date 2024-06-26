@@ -18,6 +18,7 @@ import { fuseAnimations } from '@fuse/animations';
 
 
 
+
 @Component({
   selector: 'app-risco',
   standalone: true,
@@ -35,7 +36,8 @@ import { fuseAnimations } from '@fuse/animations';
     FuseHighlightComponent,
     MatListModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+
   ],
   templateUrl: './riscos.component.html',
   styleUrls: ['./riscos.component.scss'],
@@ -45,29 +47,29 @@ export class RiscosComponent implements OnInit {
   objetivosEstrategicos: objetivosEstrategi[] = [];
   errorMessage: string = '';
   objetivoEstrategico : string = '';
-  
-  
-  
+
+
+
 
   constructor(private objetivosEstrategicosService: RiscosService) { }
-  
+
 
   ngOnInit(): void {
     this.objetivosEstrategicosService.pegarObjetivos().subscribe(
       (data: objetivosEstrategi[]) => {
         this.objetivosEstrategicos = data;
-        
+
       },
       (error) => {
         this.errorMessage = 'Ainda não possui objetivos estratégicos cadastrados!';
         console.error('Erro ao carregar os objetivos estratégicos:', error);
       },
-      
+
     );
-    
-    
-    
+
+
+
   }
-   
+
 }
 
