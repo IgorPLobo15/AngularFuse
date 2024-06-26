@@ -16,7 +16,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'heroicons_outline:document-text',
         link : '/formulario'
     },
-    
+
     {
         id   : 'produto1',
         title: 'Quimicos',
@@ -37,9 +37,10 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 icon : 'heroicons_outline:presentation-chart-line',
                 link : '/riscos'
             }
+
         ]
     }
-    
+
 ];
 export const compactNavigation: FuseNavigationItem[] = [
     {
