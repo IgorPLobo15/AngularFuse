@@ -19,6 +19,7 @@ import { fuseAnimations } from '@fuse/animations';
 
 
 
+
 @Component({
   selector: 'app-risco',
   standalone: true,
@@ -37,6 +38,7 @@ import { fuseAnimations } from '@fuse/animations';
     MatListModule,
     FormsModule,
     CommonModule,
+    MatSelectModule
 
   ],
   templateUrl: './riscos.component.html',
