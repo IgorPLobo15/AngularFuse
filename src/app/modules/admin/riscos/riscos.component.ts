@@ -15,6 +15,7 @@ import { AnimationBuilder } from '@angular/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
 import { fuseAnimations } from '@fuse/animations';
+import { EventoderiscoComponent } from './eventoderisco/eventoderisco.component';
 
 
 
@@ -39,7 +40,8 @@ import { fuseAnimations } from '@fuse/animations';
     FormsModule,
     CommonModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    EventoderiscoComponent
 
   ],
   templateUrl: './riscos.component.html',
