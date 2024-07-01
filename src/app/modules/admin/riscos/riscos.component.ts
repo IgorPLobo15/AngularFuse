@@ -1,6 +1,6 @@
 import { ApplicationModule, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCommonModule, MatOptionModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -38,7 +38,8 @@ import { fuseAnimations } from '@fuse/animations';
     MatListModule,
     FormsModule,
     CommonModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule
 
   ],
   templateUrl: './riscos.component.html',
@@ -50,7 +51,9 @@ export class RiscosComponent implements OnInit {
   errorMessage: string = '';
   objetivoEstrategico : string = '';
 
+  toppings = new FormControl('');
 
+  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
 
 
   constructor(private objetivosEstrategicosService: RiscosService) { }
