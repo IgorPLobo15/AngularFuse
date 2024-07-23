@@ -36,6 +36,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type : 'basic',
                 icon : 'heroicons_outline:presentation-chart-line',
                 link : '/riscos'
+            },
+            {   
+                id   : 'classificacaorisco',
+                title: 'Classificação de Risco',
+                type : 'basic',
+                icon : 'heroicons_outline:presentation-chart-line',
+                link : '/risco'
             }
 
         ]

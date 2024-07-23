@@ -77,7 +77,8 @@ export const appRoutes: Route[] = [
             {path: 'example', loadChildren: () => import('app/modules/admin/example/example.routes')},
             {path: 'formulario', loadChildren: () => import('app/modules/admin/formulario/formulario.routes')},
             {path: 'losprodutos1', loadChildren: () => import('app/modules/admin/losprodutos1/losprodutos1.routes')},
-            {path: 'riscos', loadChildren: () => import('app/modules/admin/riscos/riscos.routes')}
+            {path: 'riscos', loadChildren: () => import('app/modules/admin/riscos/riscos.routes')},
+            {path: 'classificacaorisco', loadChildren: () => import('app/modules/admin/riscos/riscos.routes')},
 
 
 
